@@ -1,7 +1,12 @@
+body {
+  background-color: hsl(202, 85%, 42%);
+}
+
 .content {
   display: grid;
   background-color: aqua;
   border: 3px solid black;
+  border-radius: 20px;
 
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 195px);
@@ -13,27 +18,62 @@
   grid-row-start: 1;
   grid-row-end: 1;
   border: 2px solid red;
+  border-radius: 20px;
 
   text-align: center;
 }
 
 .sideBar {
+  background-color: aquamarine;
+  border-radius: 20px;
+
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 1;
   grid-row-end: 5;
-  border: 2px solid yellow;
+
   text-align: center;
 }
 
+.sideBar h3 {
+  font-size: xx-large;
+}
+
 .navBar {
-  display: grid;
-  border: 2px solid black;
+  padding-bottom: 40px;
+}
+
+.navBar p {
+  padding: 5px;
+  font-size: large;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a {
+  color: black;
+}
+
+.navBar p:hover {
+  /* background-color: black; */
+  color: black;
+  transform: skew(-20deg);
 }
 
 .settings {
   display: grid;
-  border: 2px solid red;
+  padding: 20px;
+}
+
+.settings a {
+}
+
+.settings a:hover {
+  /* background-color: black; */
+  color: black;
+  transform: skew(-20deg);
 }
 
 .projects {
@@ -54,11 +94,50 @@
   text-align: center;
 }
 
+.announcements {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, max(200px, 1fr));
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: aquamarine;
+  margin: 10px;
+}
+
 .trending {
   grid-column-start: 4;
   grid-column-end: 4;
   grid-row-start: 4;
   grid-row-end: 4;
   border: 2px solid blue;
+  border-radius: 20px;
+  background-color: aquamarine;
   text-align: center;
+}
+
+.highlight {
+  display: grid;
+  grid-template-columns: 0.75fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+}
+
+.highlight div {
+}
+
+.highlight div:hover {
+  transform: skew(-20deg);
+}
+
+.socials {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 4;
+  grid-row-end: 4;
+
+  text-align: center;
+}
+
+.socials p {
+  font-size: x-large;
 }
