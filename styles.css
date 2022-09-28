@@ -4,7 +4,7 @@ body {
 
 .content {
   display: grid;
-  background-color: aqua;
+  background-image: linear-gradient(90deg, darkorange, orange 60%, cyan);
   border: 3px solid black;
   border-radius: 20px;
 
@@ -24,8 +24,9 @@ body {
 }
 
 .sideBar {
-  background-color: aquamarine;
+  background-image: linear-gradient(90deg, orangeRed, darkorange);
   border-radius: 20px;
+  margin: 10px;
 
   grid-column-start: 1;
   grid-column-end: 1;
@@ -81,8 +82,23 @@ a {
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 5;
-  border: 2px solid green;
   text-align: center;
+}
+
+.work {
+  height: clamp(150px, 500px, 80%);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, clamp(150px, 200px, 2fr));
+}
+
+.work div {
+  background-image: linear-gradient(90deg, darkorange, orange, cyan);
+  border-radius: 20px;
+  margin: 5px;
+  padding: 5px;
+  grid-gap: 25px;
 }
 
 .news {
@@ -90,7 +106,6 @@ a {
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 4;
-  border: 2px solid pink;
   text-align: center;
 }
 
@@ -98,10 +113,11 @@ a {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, max(200px, 1fr));
-  border: 2px solid black;
+
   border-radius: 20px;
-  background-color: aquamarine;
+  background-image: linear-gradient(90deg, cyan, aquamarine);
   margin: 10px;
+  padding: 5px;
 }
 
 .trending {
@@ -109,14 +125,16 @@ a {
   grid-column-end: 4;
   grid-row-start: 4;
   grid-row-end: 4;
-  border: 2px solid blue;
   border-radius: 20px;
-  background-color: aquamarine;
+
   text-align: center;
+  margin: 10px;
 }
 
 .highlight {
   display: grid;
+  border-radius: 20px;
+  background-image: linear-gradient(90deg, cyan, aquamarine);
   grid-template-columns: 0.75fr;
   grid-template-rows: 1fr 1fr;
   justify-content: center;
